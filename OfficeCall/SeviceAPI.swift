@@ -8,60 +8,37 @@
 
 import Foundation
 import Alamofire
-class ServiceAPI: AnyObject {
-    //get data login 
-    /*
-    {
-    "message": "success"
-    }
-     */
-    internal func getLogin(success succed: AnyObject ->(),failure fail : NSError -> ())
-    {
-        let get_login:String = "http://192.168.10.25:8080/api/login/manh"
-        Alamofire.request(.GET, get_login).responseJSON{
-            response in
-            //handle JSON
-            if response.result.value != nil
-            {
-                succed(response.result.value!);
-            }
-            else
-            {
-                fail(response.result.error!);
-            }
-        }
-    }
-    internal func getPhone(success succed: AnyObject ->(),failure fail : NSError -> ())
-    {
-        let get_login:String = "http://192.168.10.25:8080/api/getphone"
-        Alamofire.request(.GET, get_login).responseJSON{
-            response in
-            //handle JSON
-            if response.result.value != nil
-            {
-                succed(response.result.value!);
-            }
-            else
-            {
-                fail(response.result.error!);
-            }
-        }
-    }
-    internal func postLocation(param:[String: AnyObject],success succed: AnyObject ->(),failure fail : NSError -> ())
-    {
-        let post_location:String = "http://192.168.10.25:8080/api/postlocation";
+//GET
+let get_login: String = "http://192.168.10.25:8080/api/login/manhas";
+let get_phone: String = "http://192.168.10.25:8080/api/getphone";
+//POST
+let post_location: String = "http://192.168.10.25:8080/api/postlocation";
 
-        
+class ServiceAPI: AnyObject {
+    
+//    internal func getLogin(success succed: AnyObject ->(),failure fail : NSError -> ())
+    internal func getLogin(complete completed: (Response<AnyObject, NSError>) ->())
+    {
+        Alamofire.request(.GET, get_login).responseJSON{
+            response in
+            //handle JSON
+            completed(response);
+        }
+    }
+    internal func getPhone(complete completed: (Response<AnyObject, NSError>) ->())
+    {
+        Alamofire.request(.GET, get_phone).responseJSON{
+            response in
+            //handle JSON
+            completed(response);
+        }
+    }
+    internal func postLocation(param:[String: AnyObject],complete completed: (Response<AnyObject, NSError>) ->())
+    {
         Alamofire.request(.POST, post_location, parameters: param, encoding: .URL)
-            .responseString { response in
-                if response.result.value != nil
-                {
-                    succed(response.result.value!);
-                }
-                else
-                {
-                    fail(response.result.error!);
-                }
+            .responseJSON { response in
+                
+                completed(response);
         }
 
     }

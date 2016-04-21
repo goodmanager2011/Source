@@ -18,39 +18,51 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
 //        //get login
-//        api.getLogin(success: { (response) in
-//            print("response \(response)");
-//        }) { (error) in
-//            print("error \(error)");
-//        }
-//        //
-        api.getPhone(success: { (response) in
-            print("response \(response)")
-
-//            if let valPhone = response["phone"] else{
-//                print("error")
-//            }
-
-            self.officeCall = response["phone"] as? String
-            
-        }) { (error) in
-            print("error \(error)");
+        api.getLogin { (response) in
+            if response.result.value != nil
+            {
+                //success
+                print("response \(response.result.value)")
+                
+            }
+            else
+            {
+                //fail
+                print("response \(response.result.error)")
+                
+            }
         }
-        
-//        //post
-//        api.postLocation(["location":"543"], success: { (response) in
-//            print("response \(response)");
-//        }) { (error) in
-//            print("error \(error)");
-//        }
+        api.getPhone { (response) in
+            if response.result.value != nil
+            {
+                //success
+                print("response \(response.result.value)")
+                self.officeCall = response.result.value!["phone"] as? String;
+            }
+            else
+            {
+                //fail
+                print("response \(response.result.error)")
+
+            }
+        }
         
     }
 
     @IBAction func postLocation(sender: AnyObject) {
-        api.postLocation(["location":"543"], success: { (response) in
-            print("response \(response)");
-        }) { (error) in
-            print("error \(error)");
+        api.postLocation(["location":"1235"]) { (response) in
+            if response.result.value != nil
+            {
+                //success
+                print("response \(response.result.value)")
+                
+            }
+            else
+            {
+                //fail
+                print("response \(response.result.error)")
+                
+            }
         }
 
     }
