@@ -51,18 +51,18 @@ class ServiceAPI: AnyObject {
     {
         let post_location:String = "http://192.168.10.25:8080/api/postlocation";
 
-        Alamofire.request(.POST, post_location, parameters: param, encoding: .URL).responseJSON{
-            response in
-            
-            //handle JSON
-            if response.result.value != nil
-            {
-                succed(response.result.value!);
-            }
-            else
-            {
-                fail(response.result.error!);
-            }
+        
+        Alamofire.request(.POST, post_location, parameters: param, encoding: .URL)
+            .responseString { response in
+                if response.result.value != nil
+                {
+                    succed(response.result.value!);
+                }
+                else
+                {
+                    fail(response.result.error!);
+                }
         }
+
     }
 }

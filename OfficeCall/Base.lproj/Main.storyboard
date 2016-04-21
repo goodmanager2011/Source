@@ -16,11 +16,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb0-eS-Bq8">
+                                <rect key="frame" x="284" y="226" width="34" height="30"/>
+                                <state key="normal" title="login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-Zm-1AX">
+                                <rect key="frame" x="237" y="285" width="127" height="30"/>
+                                <state key="normal" title="get phone number"/>
+                                <connections>
+                                    <action selector="fnGetCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Gr-hb-zia"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ke-L3-cUF">
+                                <rect key="frame" x="256" y="345" width="89" height="30"/>
+                                <state key="normal" title="post location"/>
+                                <connections>
+                                    <action selector="postLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7C5-Gl-Ata"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uNh-Zm-1AX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Aoz-v1-0tj"/>
+                            <constraint firstItem="4Ke-L3-cUF" firstAttribute="centerX" secondItem="uNh-Zm-1AX" secondAttribute="centerX" id="Kch-e1-1PN"/>
+                            <constraint firstItem="uNh-Zm-1AX" firstAttribute="top" secondItem="Bb0-eS-Bq8" secondAttribute="bottom" constant="29" id="KfE-rd-Mu4"/>
+                            <constraint firstItem="Bb0-eS-Bq8" firstAttribute="centerX" secondItem="uNh-Zm-1AX" secondAttribute="centerX" id="khp-KT-EjD"/>
+                            <constraint firstItem="uNh-Zm-1AX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nec-rC-wgb"/>
+                            <constraint firstItem="4Ke-L3-cUF" firstAttribute="top" secondItem="uNh-Zm-1AX" secondAttribute="bottom" constant="30" id="zBO-Aa-smK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="75" y="263"/>
         </scene>
     </scenes>
 </document>
