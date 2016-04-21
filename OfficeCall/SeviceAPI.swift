@@ -50,22 +50,20 @@ class ServiceAPI: AnyObject {
     internal func postLocation(param:[String: AnyObject],success succed: AnyObject ->(),failure fail : NSError -> ())
     {
         let post_location:String = "http://192.168.10.25:8080/api/postlocation";
-        let headers = [
-            "Content-Type": "application/x-www-form-urlencoded",
-        ]
+
         
-        Alamofire.request(.POST, post_location, parameters: ["location" : "123"], encoding: .JSON,headers: headers).responseJSON{
-            response in
-            
-            //handle JSON
-            if response.result.value != nil
-            {
-                succed(response.result.value!);
-            }
-            else
-            {
-                fail(response.result.error!);
-            }
+        let newTodo = ["location": "123 Psot"]
+        Alamofire.request(.POST, post_location, parameters: newTodo, encoding: .URL)
+            .responseString { response in
+                if response.result.value != nil
+                {
+                    succed(response.result.value!);
+                }
+                else
+                {
+                    fail(response.result.error!);
+                }
         }
+
     }
 }

@@ -31,6 +31,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ke-L3-cUF">
                                 <rect key="frame" x="256" y="345" width="89" height="30"/>
                                 <state key="normal" title="post location"/>
+                                <connections>
+                                    <action selector="postLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7C5-Gl-Ata"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -46,6 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="75" y="263"/>
         </scene>
     </scenes>
 </document>

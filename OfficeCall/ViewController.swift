@@ -10,13 +10,13 @@ import UIKit
 class ViewController: UIViewController {
 
     var officeCall: String?
+    let api: ServiceAPI = ServiceAPI();
 
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        let api: ServiceAPI = ServiceAPI();
 //        //get login
 //        api.getLogin(success: { (response) in
 //            print("response \(response)");
@@ -37,15 +37,23 @@ class ViewController: UIViewController {
             print("error \(error)");
         }
         
-        //post
+//        //post
+//        api.postLocation(["location":"543"], success: { (response) in
+//            print("response \(response)");
+//        }) { (error) in
+//            print("error \(error)");
+//        }
+        
+    }
+
+    @IBAction func postLocation(sender: AnyObject) {
         api.postLocation(["location":"543"], success: { (response) in
             print("response \(response)");
         }) { (error) in
             print("error \(error)");
         }
-        
-    }
 
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
