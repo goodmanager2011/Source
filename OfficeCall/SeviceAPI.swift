@@ -54,7 +54,7 @@ class ServiceAPI: AnyObject {
             "Content-Type": "application/x-www-form-urlencoded",
         ]
         
-        Alamofire.request(.POST, post_location, parameters: param, encoding: .JSON,headers: headers).responseJSON{
+        Alamofire.request(.POST, post_location, parameters: ["location" : "123"], encoding: .JSON,headers: headers).responseJSON{
             response in
             
             //handle JSON
