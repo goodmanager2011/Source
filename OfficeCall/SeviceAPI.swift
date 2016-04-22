@@ -13,6 +13,7 @@ let get_login: String = "http://192.168.10.25:8080/api/login/manhas";
 let get_phone: String = "http://192.168.10.25:8080/api/getphone";
 //POST
 let post_location: String = "http://192.168.10.25:8080/api/postlocation";
+let post_uploadFile: String = "http://192.168.10.25:8080/api/upload";
 
 class ServiceAPI: AnyObject {
     
@@ -41,5 +42,18 @@ class ServiceAPI: AnyObject {
                 completed(response);
         }
 
+    }
+    //upload
+    internal func uploadFile(param:[String: AnyObject],complete completed: (Response<AnyObject, NSError>) ->())
+    {
+        let image: UIImage = UIImage.init(named: "1.png")!;
+        guard let imageData = UIImageJPEGRepresentation(image, 0.5) else {
+            print("Could not get JPEG representation of UIImage")
+            return
+        }
+        Alamofire.upload(.POST, post_uploadFile, data: imageData) .responseJSON { response in
+            
+            completed(response);
+        };
     }
 }

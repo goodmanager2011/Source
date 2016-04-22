@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		711B20022E700EC0BF581D68 /* Pods_OfficeCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1EF55A02D79331744BA66B /* Pods_OfficeCall.framework */; };
 		BB89A9501CC87ECC00C1D204 /* SeviceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB89A94F1CC87ECC00C1D204 /* SeviceAPI.swift */; };
+		BBC485E11CCA247F00C136A3 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BBC485E01CCA247F00C136A3 /* 1.png */; };
 		E1DA6E131CC8771300C1B3D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA6E121CC8771300C1B3D9 /* AppDelegate.swift */; };
 		E1DA6E151CC8771300C1B3D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA6E141CC8771300C1B3D9 /* ViewController.swift */; };
 		E1DA6E181CC8771300C1B3D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA6E161CC8771300C1B3D9 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		B6DF8D9DF18A548312295AE2 /* Pods-OfficeCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeCall.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeCall/Pods-OfficeCall.release.xcconfig"; sourceTree = "<group>"; };
 		BB89A94F1CC87ECC00C1D204 /* SeviceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeviceAPI.swift; sourceTree = "<group>"; };
 		BB89A9531CC87F7200C1D204 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		BBC485E01CCA247F00C136A3 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		BFAF24E8B3849E2368F72758 /* Pods-OfficeCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeCall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeCall/Pods-OfficeCall.debug.xcconfig"; sourceTree = "<group>"; };
 		E1DA6E0F1CC8771300C1B3D9 /* OfficeCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DA6E121CC8771300C1B3D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				BB89A9531CC87F7200C1D204 /* Config.h */,
 				BB89A94F1CC87ECC00C1D204 /* SeviceAPI.swift */,
+				BBC485E01CCA247F00C136A3 /* 1.png */,
 				E1DA6E121CC8771300C1B3D9 /* AppDelegate.swift */,
 				E1DA6E141CC8771300C1B3D9 /* ViewController.swift */,
 				E1DA6E161CC8771300C1B3D9 /* Main.storyboard */,
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC485E11CCA247F00C136A3 /* 1.png in Resources */,
 				E1DA6E1D1CC8771300C1B3D9 /* LaunchScreen.storyboard in Resources */,
 				E1DA6E1A1CC8771300C1B3D9 /* Assets.xcassets in Resources */,
 				E1DA6E181CC8771300C1B3D9 /* Main.storyboard in Resources */,

@@ -50,7 +50,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func postLocation(sender: AnyObject) {
-        api.postLocation(["location":"1235"]) { (response) in
+//        api.postLocation(["location":"1235"]) { (response) in
+//            if response.result.value != nil
+//            {
+//                //success
+//                print("response \(response.result.value)")
+//                
+//            }
+//            else
+//            {
+//                //fail
+//                print("response \(response.result.error)")
+//                
+//            }
+//        }
+        api.uploadFile(["location":"1235"]) { (response) in
             if response.result.value != nil
             {
                 //success
@@ -64,7 +78,6 @@ class ViewController: UIViewController {
                 
             }
         }
-
     }
 
     override func didReceiveMemoryWarning() {
